@@ -1,0 +1,30 @@
+{
+  "name": "npm-exercises",
+  "version": "1.0.0",
+  "description": "practicing npm using exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-champagne/npm-exercises.git"
+  },
+  "keywords": [
+    "practice",
+    "npm",
+    "exercise"
+  ],
+  "author": "CC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c-champagne/npm-exercises/issues"
+  },
+  "homepage": "https://github.com/c-champagne/npm-exercises#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15",
+    "robotjs": "^0.6.0",
+    "speed-test": "^2.1.0"
+  }
+}
