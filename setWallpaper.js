@@ -4,24 +4,34 @@ const wallpaper = require("wallpaper");
 
 //Axios code here
 
+let url = "none";
+function getDoggo (doggo) {
+    /* console.log(doggo.data.message); */
+    url = doggo.data.message;
+    console.log("In function " + url);
+}
+
+axios.get("https://dog.ceo/api/breed/shiba/images/random")
+    .then(getDoggo);
 
 
 //Download-file code here
-let url = //Axios url from dog.ceo here
+ /* let url = doggo.data.message; */
+console.log("This is " + url);
 
-var options = {
+let options = {
     directory: "./images",
     filename: "dogbg.jpg"
 }
 
-download(url, options, function(err){
+/*  download(url, options, function(err){
     if (err) throw err
     console.log("Bad doggo")
-})
+})  */
 
 //Wallpaper code here
-(async () => {
-    await wallpaper.set("unicorn.jpg");
+/* (async () => {
+    await wallpaper.set("dogbg.jpg");
 
     await wallpaper.get();
-})
+}) */

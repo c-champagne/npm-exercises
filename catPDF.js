@@ -5,14 +5,13 @@ const catFacts = require("cat-facts");
 let randomFact = catFacts.random();
 
 //PDF Document code
-const PDFDocument = require("pdfkit")
+const PDFDocument = require("pdfkit");
 const fs = require("fs");
 
 const doc = new PDFDocument();
 
 doc.pipe(fs.createWriteStream("output.pdf"));
 
-doc
-    .text(randomFact);
+doc.text(randomFact);
 
 doc.end();
