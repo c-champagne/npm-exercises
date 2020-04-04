@@ -3,35 +3,56 @@ const axios = require("axios");
 const wallpaper = require("wallpaper");
 
 //Axios code here
-
-let url = "none";
 function getDoggo (doggo) {
     /* console.log(doggo.data.message); */
-    url = doggo.data.message;
-    console.log("In function " + url);
-}
+    let url = doggo.data.message;
+    let options = {
+        directory: "./images", 
+        filename: "dogbg.jpg"
+    }
+    
+    download(url, options, function(err, data){
+        if (err) {
+        console.log("Bad doggo");
+        return;
+        }
+        const setWallP = async () => {
+            await wallpaper.set("./images/dogbg.jpg");
+        }; 
+        
+        setWallP();
+        console.log("Your wallpaper has been set to " + data);
+    })
+     /* console.log("In function " + url); */
+        
+    }; 
 
 axios.get("https://dog.ceo/api/breed/shiba/images/random")
     .then(getDoggo);
 
 
 //Download-file code here
- /* let url = doggo.data.message; */
-console.log("This is " + url);
+/* let url = doggo.data.message; */
+ /* console.log("This is " + url); */
 
-let options = {
-    directory: "./images",
+/* let url = "http://i.imgur.com/G9bDaPH.jpg"; //test URL*/
+
+/* let options = {
+    directory: "./images", 
     filename: "dogbg.jpg"
 }
 
-/*  download(url, options, function(err){
-    if (err) throw err
-    console.log("Bad doggo")
-})  */
+download(url, options, function(err, data){
+    if (err) {
+    console.log("Bad doggo");
+    return;
+    }
+    console.log("Your wallpaper has been set to " + data);
+}) */  
 
 //Wallpaper code here
-/* (async () => {
-    await wallpaper.set("dogbg.jpg");
+/*   const setWallP = async () => {
+    await wallpaper.set("./images/dogbg.jpg");
+}; 
 
-    await wallpaper.get();
-}) */
+setWallP();  */
