@@ -1,14 +1,15 @@
 const nodemailer = require("nodemailer");
 
 async function main() {
-    let testAccount = await nodemailer.createTestAccount();
+    /* let testAccount = await nodemailer.createTestAccount(); */
     let transporter = nodemailer.createTransport({
-        host: "smtp.ethereal.email",
+        service: "gmail",
+      /*   host: "smtp.ethereal.email", This is the Ethereal info
         port: 587,
-        secure: false,
+        secure: false, */
         auth: {
-            user: testAccount.user,
-            pass: testAccount.pass
+            user: "cassielchampagne@gmail.com",
+            pass: "YOURPWHERE" //used real PW but removed, could not get temp app password setting to work
         }
     });
     let info = await transporter.sendMail({

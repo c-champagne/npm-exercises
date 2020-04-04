@@ -10,7 +10,7 @@ const fs = require("fs");
 
 const doc = new PDFDocument();
 
-doc.pipe(fs.createWriteStream("output.pdf"));
+doc.pipe(fs.createWriteStream("output2.pdf"));
 
 doc.text(randomFact);
 
