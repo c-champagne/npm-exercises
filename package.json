@@ -4,7 +4,8 @@
   "description": "practicing npm using exercises",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier -write ."
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,12 @@
   "homepage": "https://github.com/c-champagne/npm-exercises#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "cat-facts": "^1.0.2",
+    "download-file": "^0.1.5",
     "lodash": "^4.17.15",
+    "pdfkit": "^0.11.0",
     "robotjs": "^0.6.0",
-    "speed-test": "^2.1.0"
+    "speed-test": "^2.1.0",
+    "wallpaper": "^4.4.1"
   }
 }
